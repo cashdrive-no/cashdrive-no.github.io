@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cash &amp; Drive | Bilverksted i Drammen</title>
+<meta name="description" content="Offentlig godkjent bilverksted på Strømsø i Drammen. Service, reparasjon og EU-kontroll på alle bilmerker opp til 3 500 kg. God service til avtalt pris.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://cashdrive.no/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://cashdrive.no/">
+<meta property="og:title" content="Cash &amp; Drive | Bilverksted i Drammen">
+<meta property="og:description" content="Service, reparasjon og EU-kontroll på alle bilmerker. Hos oss blir ingenting dyrere enn avtalt.">
+<meta property="og:image" content="https://cashdrive.no/bilder/verksted.jpg">
+<meta name="theme-color" content="#121214">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e0222d'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-weight='700' font-size='38' text-anchor='middle' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="bilder/verksted.jpg" as="image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Cash & Drive AS",
+  "url": "https://cashdrive.no/",
+  "image": "https://cashdrive.no/bilder/bygg.jpg",
+  "telephone": "+47 32 81 05 70",
+  "email": "cashdrive@cashdrive.no",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bjørnstjerne Bjørnsons gate 84",
+    "postalCode": "3044",
+    "addressLocality": "Drammen",
+    "addressCountry": "NO"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 59.73229, "longitude": 10.21219 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "07:30",
+    "closes": "16:00"
+  }],
+  "sameAs": ["https://www.facebook.com/cashdrive.no/"]
+}
+</script>
+
+<style>
+@font-face {
+  font-family: "Archivo";
+  src: url("fonts/archivo-latin.woff2") format("woff2");
+  font-weight: 400 800;
+  font-stretch: 100% 125%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("fonts/roboto-slab-800-latin.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+/* The page is dark by design (garage look). Shape rule: buttons are pills, panels and photos use --radius. */
+:root {
+  color-scheme: dark;
+  --bg: #121214;
+  --bg-2: #19191c;
+  --bg-3: #222226;
+  --ink: #efeff1;
+  --muted: #a3a3ad;
+  --faint: #3b3b42;
+  --line: #2a2a30;
+  --accent: #e0222d;
+  --accent-hover: #f03a44;
+  --accent-deep: #c8102e;
+  --accent-ink: #ff5a63;
+  --radius: 20px;
+  --wrap: 1240px;
+  --gutter: 24px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0; overflow-x: clip;
+  background: var(--bg); color: var(--ink);
+  font-family: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px; line-height: 1.6;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, figure, blockquote, dl, dd { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3 { font-weight: 800; line-height: 1; letter-spacing: -0.02em; text-wrap: balance; }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+.i { width: 1.2em; height: 1.2em; fill: currentColor; flex: none; }
+.muted { color: var(--muted); }
+.slab { font-family: "Roboto Slab", Rockwell, Georgia, serif; font-weight: 800; font-stretch: normal; letter-spacing: -0.01em; }
+.red { color: var(--accent-ink); }
+:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 3px; border-radius: 6px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: .55em;
+  min-height: 52px; padding: 0 24px; border-radius: 999px; border: 1.5px solid transparent;
+  font: inherit; font-weight: 700; font-size: 16px; white-space: nowrap; text-decoration: none;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .15s ease;
+}
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn .arrow { transition: transform .3s var(--ease); }
+.btn:hover .arrow { transform: translateX(4px); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-ghost { border-color: rgb(255 255 255 / .5); color: #fff; }
+.btn-ghost:hover { background: #fff; color: var(--bg); border-color: #fff; }
+.btn-white { background: #fff; color: var(--bg); }
+.btn-white:hover { background: var(--bg); color: #fff; }
+.btn-sm { min-height: 42px; padding: 0 18px; font-size: 15px; }
+.link {
+  display: inline-flex; align-items: center; gap: .35em; font-weight: 700;
+  text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1.5px;
+}
+.link:hover { text-decoration-thickness: 3px; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgb(18 18 20 / .78);
+  backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid rgb(255 255 255 / .06);
+}
+.site-header .wrap { display: flex; align-items: center; gap: 28px; height: 68px; }
+.wordmark { font-family: "Roboto Slab", Rockwell, Georgia, serif; font-weight: 800; font-size: 23px; text-decoration: none; white-space: nowrap; }
+.wordmark span, .mega span { color: var(--accent); }
+.nav { display: flex; gap: 28px; margin-left: auto; }
+.nav a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--muted); transition: color .2s; }
+.nav a:hover { color: var(--ink); }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.icon-btn {
+  display: none; width: 42px; height: 42px; border-radius: 999px; border: 1.5px solid var(--line);
+  align-items: center; justify-content: center;
+}
+
+/* Hero */
+.hero { position: relative; isolation: isolate; min-height: min(calc(100dvh - 68px), 920px); display: flex; align-items: flex-end; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgb(18 18 20 / .25) 0%, rgb(18 18 20 / .5) 40%, rgb(18 18 20 / .96) 100%);
+}
+.hero .wrap { width: 100%; padding-block: 64px 56px; }
+.hero .eyebrow { color: #fff; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink); }
+.hero h1 {
+  margin-top: 18px; text-transform: uppercase; font-stretch: 118%;
+  font-size: clamp(2.7rem, 7.6vw, 7.4rem); line-height: .9; letter-spacing: -0.035em;
+}
+.hero h1 .line { display: block; }
+.hero h1 .slab { color: var(--accent); }
+.hero-bottom { margin-top: 36px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+.lede { font-size: 19px; color: #d9d9de; max-width: 44ch; }
+.ctas { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
+.info-card {
+  min-width: 300px; display: grid; gap: 12px; padding: 20px 22px; font-size: 15.5px;
+  border-radius: var(--radius); border: 1px solid rgb(255 255 255 / .12);
+  background: rgb(18 18 20 / .62); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+}
+.info-row { display: flex; gap: 10px; align-items: flex-start; }
+.info-row .i { margin-top: 3px; color: var(--muted); }
+.status { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
+.status[data-state="open"]::before { background: #2fbf71; box-shadow: 0 0 0 4px rgb(47 191 113 / .2); }
+
+/* Ticker */
+.ticker { overflow: hidden; border-block: 1px solid var(--line); padding-block: 22px; }
+.ticker .row { white-space: nowrap; font-size: clamp(1.2rem, 2.1vw, 1.8rem); font-weight: 800; font-stretch: 118%; text-transform: uppercase; letter-spacing: -0.01em; }
+.ticker .track { display: inline-flex; align-items: center; gap: .6em; padding-right: .6em; }
+.ticker .track .i { width: .6em; height: .6em; color: var(--accent); }
+
+/* Stats */
+.stats { border-block: 1px solid var(--line); }
+.stats .wrap { display: grid; grid-template-columns: repeat(3, 1fr); }
+.stat { padding: 48px 32px; border-left: 1px solid var(--line); }
+.stat:first-child { border-left: 0; padding-left: 0; }
+.stat .num { font-size: clamp(3.6rem, 7.5vw, 6.8rem); font-weight: 800; font-stretch: 125%; letter-spacing: -0.045em; line-height: .9; font-variant-numeric: tabular-nums; }
+.stat .unit { margin-left: .18em; font-size: clamp(1.4rem, 2.4vw, 2rem); color: var(--accent-ink); }
+.stat p { margin-top: 12px; color: var(--muted); }
+
+/* Manifesto */
+.manifesto { padding-block: 140px 120px; text-align: center; }
+.statement {
+  text-transform: uppercase; font-weight: 800; font-stretch: 122%;
+  font-size: clamp(2.4rem, 6.4vw, 6rem); line-height: .95; letter-spacing: -0.035em;
+  max-width: 15ch; margin-inline: auto; view-timeline-name: --statement;
+}
+.statement .slab { color: var(--accent); }
+.facts { margin-top: 56px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 36px; color: var(--muted); }
+.facts li { display: inline-flex; align-items: center; gap: 10px; }
+.facts .i { color: var(--accent-ink); width: 22px; height: 22px; }
+
+/* Services */
+.services { padding-block: 40px 120px; }
+.section-head h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); text-transform: uppercase; font-stretch: 118%; letter-spacing: -0.03em; max-width: 16ch; }
+.section-head p { margin-top: 16px; font-size: 18px; color: var(--muted); max-width: 52ch; }
+.bento { margin-top: 48px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.cell {
+  position: relative; overflow: hidden; padding: 32px; border-radius: var(--radius);
+  background: var(--bg-2); border: 1px solid var(--line);
+  transition: transform .4s var(--ease), border-color .3s ease;
+}
+.cell::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s ease;
+  background: radial-gradient(420px circle at var(--x, 50%) var(--y, 50%), rgb(224 34 45 / .13), transparent 60%);
+}
+.cell:hover { transform: translateY(-4px); border-color: rgb(224 34 45 / .55); }
+.cell:hover::after { opacity: 1; }
+.cell-a, .cell-b, .cell-photo { grid-column: span 2; }
+.cell-photo { margin: 0; padding: 0; min-height: 300px; }
+.cell-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cell-c { grid-column: span 2; }
+.cell-d { grid-column: span 4; background: var(--ink); color: var(--bg); border-color: transparent; }
+.cell-head { display: flex; align-items: center; gap: 12px; }
+.cell-head .i { width: 30px; height: 30px; color: var(--accent-ink); transition: rotate .4s var(--ease); }
+.cell:hover .cell-head .i { rotate: -14deg; }
+.cell h3 { font-size: 22px; font-stretch: 110%; }
+.checks { margin-top: 22px; display: grid; gap: 10px; }
+.checks li { display: flex; gap: 10px; }
+.checks .i { width: 18px; height: 18px; margin-top: 4px; color: var(--accent-ink); }
+.cell-d .cell-head .i { color: var(--accent-deep); }
+.brands { margin-top: 18px; text-transform: uppercase; font-size: clamp(2.2rem, 4.6vw, 3.9rem); line-height: .95; }
+.brands li { transition: translate .4s var(--ease), color .3s; }
+.brands li:hover { translate: 12px 0; color: var(--accent-deep); }
+.cell-d p { margin-top: 18px; max-width: 46ch; color: #3a3a41; }
+
+/* EU-kontroll */
+.eu { position: relative; background: var(--accent-deep); color: #fff; padding-block: 120px 112px; }
+.eu::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 16px;
+  background: repeating-linear-gradient(-45deg, var(--bg) 0 18px, var(--accent-deep) 18px 36px);
+}
+.eu .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start; }
+.eu .eyebrow { color: #fff; opacity: .9; }
+.eu h2 { margin-top: 14px; text-transform: uppercase; font-stretch: 122%; font-size: clamp(3rem, 7vw, 6.4rem); line-height: .9; letter-spacing: -0.04em; }
+.eu .lede { margin-top: 22px; color: #fff; }
+.eu .ctas { align-items: center; gap: 22px; }
+.steps { display: grid; gap: 30px; padding-top: 8px; }
+.steps li { display: grid; grid-template-columns: 52px 1fr; gap: 18px; }
+.steps .badge { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--accent-deep); }
+.steps .badge .i { width: 26px; height: 26px; }
+.steps h3 { font-size: 20px; font-stretch: 108%; line-height: 1.2; }
+.steps p { margin-top: 4px; color: #fff; }
+
+/* Reviews */
+.reviews { padding-block: 128px; }
+.reviews-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px 40px; }
+.reviews-head h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); text-transform: uppercase; font-stretch: 118%; letter-spacing: -0.03em; }
+.reviews-grid { margin-top: 52px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; }
+.q { border-radius: var(--radius); padding: 34px; background: var(--bg-2); border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
+.q p { font-size: 20px; line-height: 1.4; font-weight: 600; }
+.q-big { background: transparent; border: 0; padding: 0 24px 0 0; }
+.q-big .mark { font-size: 9rem; line-height: .6; color: var(--accent); height: .55em; }
+.q-big p { font-size: clamp(1.7rem, 3.2vw, 2.7rem); line-height: 1.15; font-weight: 700; font-stretch: 108%; letter-spacing: -0.015em; }
+.q-stack { display: grid; gap: 20px; }
+.q figcaption { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--muted); }
+.stars { display: inline-flex; gap: 2px; color: var(--accent-ink); }
+.stars .i { width: 16px; height: 16px; }
+
+/* Contact */
+.contact { padding-block: 40px 128px; }
+.contact .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+.contact-photo { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; }
+.contact-photo img { width: 100%; height: 100%; object-fit: cover; }
+.contact h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); text-transform: uppercase; font-stretch: 118%; letter-spacing: -0.03em; }
+.contact-list { margin-top: 30px; display: grid; gap: 22px; }
+.contact-list li { display: flex; gap: 14px; align-items: flex-start; }
+.contact-list .i { width: 22px; height: 22px; margin-top: 3px; color: var(--accent-ink); }
+.contact-list a { font-weight: 600; }
+.hours { display: grid; grid-template-columns: auto auto; gap: 2px 22px; }
+.hours dt { color: var(--muted); }
+.hours dd { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); padding-top: 36px; overflow: hidden; }
+.foot { display: flex; flex-wrap: wrap; gap: 12px 36px; justify-content: space-between; font-size: 15px; color: var(--muted); }
+.foot a { text-underline-offset: 4px; }
+.mega {
+  margin-top: 40px; text-align: center; white-space: nowrap; line-height: .78;
+  font-family: "Roboto Slab", Rockwell, Georgia, serif; font-weight: 800;
+  font-size: 13.2vw; letter-spacing: -0.02em; padding-bottom: .06em;
+}
+
+/* Motion: only when the visitor has not asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-bg { animation: settle 2.4s var(--ease) both; }
+  @keyframes settle { from { scale: 1.08; } }
+  .hero h1 .w { display: inline-block; animation: rise 1s var(--ease) both; animation-delay: calc(120ms + var(--i) * 80ms); }
+  @keyframes rise { from { opacity: 0; translate: 0 45%; } }
+  .hero .fade { animation: fadeup 1s var(--ease) both; animation-delay: 620ms; }
+  @keyframes fadeup { from { opacity: 0; translate: 0 16px; } }
+
+  .ticker .track { animation: left 60s linear infinite; }
+  @keyframes left { to { translate: -100% 0; } }
+  .ticker:hover .track { animation-play-state: paused; }
+
+  .js .reveal > * { opacity: 0; translate: 0 30px; transition: opacity .9s var(--ease), translate .9s var(--ease); }
+  .js .reveal > :nth-child(2) { transition-delay: .08s; }
+  .js .reveal > :nth-child(3) { transition-delay: .16s; }
+  .js .reveal > :nth-child(4) { transition-delay: .24s; }
+  .js .reveal.in > * { opacity: 1; translate: 0 0; }
+
+  @supports (animation-timeline: view()) {
+    .statement .w {
+      animation: ink linear both; animation-timeline: --statement;
+      animation-range: cover calc(12% + var(--i) * 3.5%) cover calc(22% + var(--i) * 3.5%);
+    }
+    @keyframes ink { from { color: var(--faint); } }
+  }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Small screens */
+@media (max-width: 960px) {
+  .hero-bottom, .eu .wrap, .reviews-grid, .contact .wrap { grid-template-columns: 1fr; }
+  .eu .wrap { gap: 48px; }
+  .bento { grid-template-columns: 1fr; }
+  .cell-a, .cell-b, .cell-c, .cell-d, .cell-photo { grid-column: auto; }
+  .cell-photo { aspect-ratio: 4 / 3; min-height: 0; }
+  .stats .wrap { grid-template-columns: 1fr; }
+  .stat, .stat:first-child { border-left: 0; border-top: 1px solid var(--line); padding: 32px 0; }
+  .stat:first-child { border-top: 0; }
+  .q-big { padding: 0; }
+}
+@media (max-width: 760px) {
+  :root { --gutter: 16px; }
+  .nav { display: none; }
+  .header-actions { margin-left: auto; }
+  .icon-btn { display: inline-flex; }
+  .wordmark { font-size: 20px; }
+  .hero { min-height: calc(100dvh - 68px); }
+  .hero .wrap { padding-block: 40px 32px; }
+  .info-card { min-width: 0; }
+  .manifesto { padding-block: 96px 80px; }
+  .services, .contact { padding-bottom: 88px; }
+  .eu { padding-block: 88px 80px; }
+  .reviews { padding-block: 88px; }
+  .cell, .q { padding: 26px; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol><symbol id="i-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol><symbol id="i-asterisk" viewBox="0 0 256 256"><path d="M214.86,180.12a8,8,0,0,1-11,2.74L136,142.13V216a8,8,0,0,1-16,0V142.13L52.12,182.86a8,8,0,1,1-8.23-13.72L112.45,128,43.89,86.86a8,8,0,1,1,8.23-13.72L120,113.87V40a8,8,0,0,1,16,0v73.87l67.88-40.73a8,8,0,1,1,8.23,13.72L143.55,128l68.56,41.14A8,8,0,0,1,214.86,180.12Z"/></symbol><symbol id="i-car" viewBox="0 0 256 256"><path d="M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM64,200H40V184H64Zm128,0V184h24v16Zm24-32H40V120H216ZM56,144a8,8,0,0,1,8-8H80a8,8,0,0,1,0,16H64A8,8,0,0,1,56,144Zm112,0a8,8,0,0,1,8-8h16a8,8,0,0,1,0,16H176A8,8,0,0,1,168,144Z"/></symbol><symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol><symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol><symbol id="i-engine" viewBox="0 0 256 256"><path d="M240,104H227.31L192,68.69A15.86,15.86,0,0,0,180.69,64H140V40h24a8,8,0,0,0,0-16H100a8,8,0,0,0,0,16h24V64H64A16,16,0,0,0,48,80v52H24V108a8,8,0,0,0-16,0v64a8,8,0,0,0,16,0V148H48v20.69A15.86,15.86,0,0,0,52.69,180L92,219.31A15.86,15.86,0,0,0,103.31,224h77.38A15.86,15.86,0,0,0,192,219.31L227.31,184H240a16,16,0,0,0,16-16V120A16,16,0,0,0,240,104Zm0,64H224a8,8,0,0,0-5.66,2.34L180.69,208H103.31L64,168.69V80H180.69l37.65,37.66A8,8,0,0,0,224,120h16Z"/></symbol><symbol id="i-envelope-simple" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol><symbol id="i-map-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol><symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol><symbol id="i-seal-check" viewBox="0 0 256 256"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z"/></symbol><symbol id="i-star-fill" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"/></symbol><symbol id="i-tire" viewBox="0 0 256 256"><path d="M149.26,159.26C155.09,173.82,163.5,176,168,176s12.91-2.18,18.74-16.74c3.39-8.48,5.26-19.58,5.26-31.26s-1.87-22.78-5.26-31.26C180.91,82.18,172.5,80,168,80s-12.91,2.18-18.74,16.74C145.87,105.22,144,116.32,144,128S145.87,150.78,149.26,159.26ZM168,96.2c2.62,2.06,8,13,8,31.8s-5.38,29.74-8,31.8c-2.62-2.06-8-13-8-31.8S165.38,98.26,168,96.2ZM232,216H196.41C213.12,197.73,224,165.47,224,128c0-58.32-26.35-104-60-104H92C58.35,24,32,69.68,32,128S58.35,232,92,232H232a8,8,0,0,0,0-16ZM193.74,63.93C202.93,80.91,208,103.67,208,128s-5.07,47.09-14.26,64.07C185.38,207.5,174.82,216,164,216s-21.38-8.5-29.74-23.93C125.07,175.09,120,152.33,120,128s5.07-47.09,14.26-64.07C142.62,48.5,153.18,40,164,40S185.38,48.5,193.74,63.93ZM48,128c0-2.5.07-5,.17-7.44L80,97.83l24.43,17.45c-.28,4.16-.43,8.41-.43,12.72a179.89,179.89,0,0,0,3.07,33.5l-22.42-16a8,8,0,0,0-9.3,0l-23.74,17A161,161,0,0,1,48,128ZM62.26,63.93C70.62,48.5,81.18,40,92,40h39.59c-11.9,13-20.84,33.12-25,57.16L84.65,81.49a8,8,0,0,0-9.3,0L50.49,99.25C52.85,86,56.83,74,62.26,63.93Zm0,128.14a100.08,100.08,0,0,1-5.94-13.32L80,161.83l33.94,24.24c4.6,12,10.6,22.22,17.65,29.93H92C81.18,216,70.62,207.5,62.26,192.07Z"/></symbol><symbol id="i-train-simple" viewBox="0 0 256 256"><path d="M184,24H72A32,32,0,0,0,40,56V184a32,32,0,0,0,32,32h8L65.6,235.2a8,8,0,1,0,12.8,9.6L100,216h56l21.6,28.8a8,8,0,1,0,12.8-9.6L176,216h8a32,32,0,0,0,32-32V56A32,32,0,0,0,184,24ZM72,40H184a16,16,0,0,1,16,16v64H56V56A16,16,0,0,1,72,40ZM184,200H72a16,16,0,0,1-16-16V136H200v48A16,16,0,0,1,184,200ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm88,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"/></symbol><symbol id="i-wrench" viewBox="0 0 256 256"><path d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"/></symbol></svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="Cash &amp; Drive, til toppen">CASH <span>&amp;</span> DRIVE</a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#eu-kontroll">EU-kontroll</a>
+      <a href="#anmeldelser">Anmeldelser</a>
+      <a href="#kontakt">Finn oss</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="tel:+4732810570" aria-label="Ring 32 81 05 70"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></a>
+      <a class="btn btn-primary btn-sm" href="https://sjekkpunkt.no/bilverksted/cashogdrive/bestilltime">Bestill time</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <img class="hero-bg" src="bilder/verksted.jpg" alt="" width="1600" height="1200" fetchpriority="high">
+    <div class="wrap">
+      <p class="eyebrow fade">Bilverksted på Strømsø siden 1990</p>
+      <h1>
+        <span class="line"><span class="w" style="--i:0">God</span> <span class="w" style="--i:1">service</span></span>
+        <span class="line"><span class="w" style="--i:2">til</span> <span class="w slab" style="--i:3">avtalt</span> <span class="w slab" style="--i:4">pris</span></span>
+      </h1>
+      <div class="hero-bottom fade">
+        <div>
+          <p class="lede">Offentlig godkjent verksted. Service, reparasjon og EU-kontroll på alle bilmerker opp til 3&nbsp;500&nbsp;kg.</p>
+          <div class="ctas">
+            <a class="btn btn-primary" href="https://sjekkpunkt.no/bilverksted/cashogdrive/bestilltime">Bestill time<svg class="i arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn-ghost" href="tel:+4732810570"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>32 81 05 70</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="status" data-open-status hidden></span>
+          <div class="info-row"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span>Mandag til fredag 07.30-16.00</span></div>
+          <div class="info-row"><svg class="i" aria-hidden="true"><use href="#i-map-pin"/></svg><span>Bjørnstjerne Bjørnsons gate 84<br><span class="muted">Ved siden av Elkjøp på Strømsø</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ticker" aria-labelledby="ticker-tittel">
+    <h2 id="ticker-tittel" class="sr">Tjenester og bilmerker</h2>
+    <div class="row" aria-hidden="true">
+      <div class="track">EU-kontroll<svg class="i"><use href="#i-asterisk"/></svg>Service<svg class="i"><use href="#i-asterisk"/></svg>Bremser<svg class="i"><use href="#i-asterisk"/></svg>Clutch<svg class="i"><use href="#i-asterisk"/></svg>Elbil og hybrid<svg class="i"><use href="#i-asterisk"/></svg>AC-service<svg class="i"><use href="#i-asterisk"/></svg>Dekkhotell<svg class="i"><use href="#i-asterisk"/></svg>Alle bilmerker<svg class="i"><use href="#i-asterisk"/></svg></div><div class="track">EU-kontroll<svg class="i"><use href="#i-asterisk"/></svg>Service<svg class="i"><use href="#i-asterisk"/></svg>Bremser<svg class="i"><use href="#i-asterisk"/></svg>Clutch<svg class="i"><use href="#i-asterisk"/></svg>Elbil og hybrid<svg class="i"><use href="#i-asterisk"/></svg>AC-service<svg class="i"><use href="#i-asterisk"/></svg>Dekkhotell<svg class="i"><use href="#i-asterisk"/></svg>Alle bilmerker<svg class="i"><use href="#i-asterisk"/></svg></div><div class="track">EU-kontroll<svg class="i"><use href="#i-asterisk"/></svg>Service<svg class="i"><use href="#i-asterisk"/></svg>Bremser<svg class="i"><use href="#i-asterisk"/></svg>Clutch<svg class="i"><use href="#i-asterisk"/></svg>Elbil og hybrid<svg class="i"><use href="#i-asterisk"/></svg>AC-service<svg class="i"><use href="#i-asterisk"/></svg>Dekkhotell<svg class="i"><use href="#i-asterisk"/></svg>Alle bilmerker<svg class="i"><use href="#i-asterisk"/></svg></div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Fakta om verkstedet">
+    <div class="wrap reveal">
+      <div class="stat"><span class="num" data-since="1990">36</span><span class="unit slab">år</span><p>i drift i Drammen</p></div>
+      <div class="stat"><span class="num" data-count="3500">3&nbsp;500</span><span class="unit slab">kg</span><p>Alle bilmerker opp til denne vekten</p></div>
+      <div class="stat"><span class="num" data-count="4.3" data-decimals="1">4,3</span><span class="unit slab">/5</span><p>Snitt på Google, 99 vurderinger</p></div>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-label="Vårt løfte">
+    <div class="wrap">
+      <p class="statement"><span class="w" style="--i:0">Hos</span> <span class="w" style="--i:1">oss</span> <span class="w" style="--i:2">blir</span> <span class="w" style="--i:3">ingenting</span> <span class="w slab" style="--i:4">dyrere</span> <span class="w slab" style="--i:5">enn</span> <span class="w slab" style="--i:6">avtalt.</span></p>
+      <ul class="facts">
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Prisen avtales før vi begynner</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-car"/></svg>Utlånsbil ved service og større jobber</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-train-simple"/></svg>Kort vei til buss og tog</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="services" id="tjenester" aria-labelledby="tjenester-tittel">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 id="tjenester-tittel">Alt bilen trenger</h2>
+        <p>Personbiler og varebiler opp til 3&nbsp;500&nbsp;kg, både bensin, diesel, hybrid og elbil.</p>
+      </div>
+
+      <div class="bento reveal">
+        <article class="cell cell-a">
+          <div class="cell-head"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg><h3>Service og vedlikehold</h3></div>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Bilservice og oljeskift</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Service på elbil og hybrid</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>AC- og klimaservice</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Flushing av automatgirkasse</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Tilhengerservice (Tempo 100)</li>
+          </ul>
+        </article>
+
+        <article class="cell cell-b">
+          <div class="cell-head"><svg class="i" aria-hidden="true"><use href="#i-engine"/></svg><h3>Reparasjon og feilsøking</h3></div>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Diagnose og feilkodelesing</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Bilelektriske reparasjoner</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Motorstyring og innsprøytning, bensin og diesel</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Brems, clutch, eksos og støtdempere</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Hjulstillingskontroll</li>
+          </ul>
+        </article>
+
+        <figure class="cell cell-photo"><img src="bilder/motor.jpg" alt="V8-motor i motorheis på verkstedet" width="1600" height="1450" loading="lazy"></figure>
+
+        <article class="cell cell-c">
+          <div class="cell-head"><svg class="i" aria-hidden="true"><use href="#i-tire"/></svg><h3>Dekk</h3></div>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Dekkskift</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Dekkhotell</li>
+          </ul>
+        </article>
+
+        <article class="cell cell-d">
+          <div class="cell-head"><svg class="i" aria-hidden="true"><use href="#i-seal-check"/></svg><h3>Spesialkompetanse</h3></div>
+          <ul class="brands slab">
+            <li>BMW</li>
+            <li>Volkswagen</li>
+            <li>Mazda</li>
+          </ul>
+          <p>Vi kjenner disse merkene spesielt godt, og følger alltid produsentens anvisninger.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="eu" id="eu-kontroll" aria-labelledby="eu-tittel">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Periodisk kjøretøykontroll</p>
+        <h2 id="eu-tittel">EU-kontroll</h2>
+        <p class="lede">Vi er godkjent av Statens vegvesen og gjør EU-kontroll på alle bilmerker opp til 3&nbsp;500&nbsp;kg.</p>
+        <div class="ctas">
+          <a class="btn btn-white" href="https://sjekkpunkt.no/bilverksted/cashogdrive/bestilltime">Bestill time<svg class="i arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+          <a class="link" href="https://www.vegvesen.no/kjoretoy/eie-og-vedlikeholde/eu-kontroll/">Sjekk fristen hos Vegvesenet<svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </div>
+
+      <ul class="steps reveal">
+        <li>
+          <span class="badge"><svg class="i" aria-hidden="true"><use href="#i-seal-check"/></svg></span>
+          <div><h3>Sikkerhet og miljø</h3><p>Vi kontrollerer blant annet lys, sikt, hjul, belter og bremser, og måler støy og avgass.</p></div>
+        </li>
+        <li>
+          <span class="badge"><svg class="i" aria-hidden="true"><use href="#i-tire"/></svg></span>
+          <div><h3>Bare dekkene som står på</h3><p>Du trenger ikke ta med det andre dekksettet.</p></div>
+        </li>
+        <li>
+          <span class="badge"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>
+          <div><h3>Kontrollseddel med resultatet</h3><p>Den viser kilometerstand, neste frist og eventuelle mangler.</p></div>
+        </li>
+        <li>
+          <span class="badge"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span>
+          <div><h3>Bestill i god tid</h3><p>Da rekker du å rette eventuelle mangler før fristen går ut.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="reviews" id="anmeldelser" aria-labelledby="anmeldelser-tittel">
+    <div class="wrap">
+      <div class="reviews-head reveal">
+        <h2 id="anmeldelser-tittel">Det kundene sier</h2>
+        <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Cash%20%26%20Drive%20SjekkPunkt%20Drammen">Les alle på Google<svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+
+      <div class="reviews-grid reveal">
+        <figure class="q q-big">
+          <div class="mark slab" aria-hidden="true">«</div>
+          <blockquote><p>Jeg hadde en reklamasjon på dynamoen, og verkstedet ordnet det raskt og profesjonelt helt kostnadsfritt.</p></blockquote>
+          <figcaption><span class="stars" aria-label="5 av 5 stjerner"><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg></span>Kunde, anmeldelse på Google</figcaption>
+        </figure>
+        <div class="q-stack">
+          <figure class="q">
+            <blockquote><p>«Fikk raskt time, og god pris. Brukt dette verkstedet flere ganger og aldri vært misfornøyd.»</p></blockquote>
+            <figcaption><span class="stars" aria-label="5 av 5 stjerner"><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg></span>Kunde, anmeldelse på Google</figcaption>
+          </figure>
+          <figure class="q">
+            <blockquote><p>«Uheldig på søndag. Hjelp på mandag. Ferdig bil på tirsdag. Topp service!»</p></blockquote>
+            <figcaption><span class="stars" aria-label="5 av 5 stjerner"><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg><svg class="i"><use href="#i-star-fill"/></svg></span>Kunde, anmeldelse på Google</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap">
+      <figure class="contact-photo reveal"><img src="bilder/bygg.jpg" alt="Bygget til Cash &amp; Drive med skilt over portene, i Bjørnstjerne Bjørnsons gate 84" width="1600" height="1200" loading="lazy"></figure>
+
+      <div class="reveal">
+        <h2 id="kontakt-tittel">Finn oss</h2>
+        <ul class="contact-list">
+          <li><svg class="i" aria-hidden="true"><use href="#i-map-pin"/></svg>
+            <div>Bjørnstjerne Bjørnsons gate 84, 3044 Drammen<br><span class="muted">Ved siden av Elkjøp på Strømsø.</span><br>
+              <a class="link red" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bj%C3%B8rnstjerne%20Bj%C3%B8rnsons%20gate%2084%2C%203044%20Drammen">Veibeskrivelse<svg class="i" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></div></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>
+            <dl class="hours">
+              <dt>Mandag-fredag</dt><dd>07.30-16.00</dd>
+              <dt>Lørdag og søndag</dt><dd>Stengt</dd>
+            </dl></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+4732810570">32 81 05 70</a></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-envelope-simple"/></svg><a href="mailto:cashdrive@cashdrive.no">cashdrive@cashdrive.no</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span>Cash &amp; Drive AS, org.nr. 960 699 394. Del av SjekkPunkt.</span>
+    <a href="https://www.facebook.com/cashdrive.no/">Facebook</a>
+  </div>
+  <div class="mega" aria-hidden="true">CASH <span>&amp;</span> DRIVE</div>
+</footer>
+
+<script>
+(() => {
+  document.documentElement.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Open or closed right now, in Norwegian time. Public holidays are not handled.
+  const el = document.querySelector('[data-open-status]');
+  if (el) {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Oslo', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+    }).formatToParts(new Date()).map(x => [x.type, x.value]));
+    const day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].indexOf(p.weekday);
+    const min = Number(p.hour) * 60 + Number(p.minute);
+    const open = day < 5 && min >= 450 && min < 960;
+    el.textContent = open ? 'Åpent nå, stenger 16.00'
+      : day < 5 && min < 450 ? 'Stengt nå, åpner 07.30'
+      : day < 4 ? 'Stengt nå, åpner i morgen 07.30'
+      : 'Stengt nå, åpner mandag 07.30';
+    el.dataset.state = open ? 'open' : 'closed';
+    el.hidden = false;
+  }
+
+  // Years in business, kept current.
+  document.querySelectorAll('[data-since]').forEach(n => {
+    n.dataset.count = new Date().getFullYear() - Number(n.dataset.since);
+    n.textContent = n.dataset.count;
+  });
+
+  const fmt = (v, d) => v.toLocaleString('nb-NO', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const countUp = n => {
+    if (reduce) return;
+    const target = Number(n.dataset.count), d = Number(n.dataset.decimals || 0), t0 = performance.now();
+    const step = now => {
+      const k = Math.min((now - t0) / 1500, 1), e = 1 - Math.pow(1 - k, 4);
+      n.textContent = fmt(target * e, d);
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in');
+      en.target.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(en.target);
+    });
+  }, { threshold: 0.18 });
+  document.querySelectorAll('.reveal').forEach(n => io ? io.observe(n) : n.classList.add('in'));
+
+  // Soft red light that follows the pointer on the service cards.
+  if (!reduce && matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.cell').forEach(c => c.addEventListener('pointermove', e => {
+      const r = c.getBoundingClientRect();
+      c.style.setProperty('--x', `${e.clientX - r.left}px`);
+      c.style.setProperty('--y', `${e.clientY - r.top}px`);
+    }));
+  }
+})();
+</script>
+</body>
+</html>
